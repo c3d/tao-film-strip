@@ -1,9 +1,5 @@
 import Mapping
 
-// Compatibility
-movie_reel YShift:real, Body -> film_strip YShift, Body
-movie_real_age Amount:real -> old_movie_shader_age Amount
-
 film_strip YShift:real, Body ->
 // ----------------------------------------------------------------------------
 //    Play something on a film strip
@@ -31,43 +27,21 @@ film_strip YShift:real, Body ->
     plane 0, 0, 1280, 76800, 40, 1200
 
 
-film_strip_old_movie YShift:real, Amount:real, Body ->
+OldMovieAmount -> 0.0
+old_movie_shader_amount Amount:real ->
 // ----------------------------------------------------------------------------
-//    Play something on a film strip with old style
+//   Define the level of the old_movie_shader effect
 // ----------------------------------------------------------------------------
-    film_strip YShift,
-        old_movie_shader
-        movie_real_age Amount
-        Body
-
-
-movie_reel_old_style Movie:text, YShift:real, Amount:real ->
-// ----------------------------------------------------------------------------
-//    Play a movie with old style
-// ----------------------------------------------------------------------------
-    movie_reel YShift,
-        color "white"
-        movie_texture Movie
-        movie_set_volume Movie, 0.9
-        movie_reel_age Amount
-        rounded_rectangle 0, 0, 1120, 750, 40
-
-
-old_movie_amount -> 0.0
-old_movie_shader_age Amount:real ->
-// ----------------------------------------------------------------------------
-//   Define the age
-// ----------------------------------------------------------------------------
-    old_movie_amount := Amount
+    OldMovieAmount := Amount
     shader_set time := page_time mod 1000
-    shader_set flicker := 0.1 * old_movie_amount
-    shader_set lightvariance := 0.05 * old_movie_amount
-    shader_set blackandwhite := 1.0 * old_movie_amount
-    shader_set oversaturation := 0.3 * old_movie_amount
-    shader_set vignette := 1.0 * old_movie_amount
-    shader_set scratches := 0.5 * old_movie_amount^4
+    shader_set flicker := 0.1 * OldMovieAmount
+    shader_set lightvariance := 0.05 * OldMovieAmount
+    shader_set blackandwhite := 1.0 * OldMovieAmount
+    shader_set oversaturation := 0.3 * OldMovieAmount
+    shader_set vignette := 1.0 * OldMovieAmount
+    shader_set scratches := 0.5 * OldMovieAmount^4
     shader_set scratchsize := 8, 200
-    shader_set splotches := 200 * old_movie_amount^8
+    shader_set splotches := 200 * OldMovieAmount^8
 
 
 old_movie_shader ->

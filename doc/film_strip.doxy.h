@@ -14,6 +14,10 @@
  * @include "hello_strip.ddd.txt"
  * @image html HelloStrip.png "The Hello World demo playing on a film strip"
  *
+ * To play a video with an "old movie" effect:
+ *
+ * @include "old_video.ddd.txt"
+ *
  * @endtaomoduledescription{FilmStrip}
  *
  * @~french
@@ -31,6 +35,10 @@
  *
  * @include "hello_strip.ddd.txt"
  * @image html HelloStrip.png "La scène Hello World jouée sur une pellicule 35mm"
+ *
+ * Pour jouer une vidéo avec un effet vieilli :
+ *
+ * @include "old_video.ddd.txt"
  *
  * @endtaomoduledescription{FilmStrip}
  *
@@ -65,6 +73,58 @@
  * Un exemple d'utilisation est donné sur la page principale du module.
  */
 film_strip(YShift:real, Body);
+
+
+/**
+ * @~english
+ * Make the current texture look like an old movie.
+ *
+ * This function activates a GLSL fragment shader. You may use
+ * @ref old_movie_shader_amount to define the overall amount of the effect,
+ * or you may use @a shader_set to define parameters individually. See
+ * the below example or @ref old_movie_shader_amount for details on what can
+ * be set.
+ *
+ * Example (<a href="old_movie.ddd.txt">old_movie.ddd</a>):
+ * @include "old_movie.ddd.txt"
+ *
+ * @~french
+ * Modifie la texture courante pour la faire ressembler à un vieux film.
+ *
+ * Cette fonction active un fragment shader GLSL. Vous pouvez utiliser
+ * @ref old_movie_shader_amount pour définir le niveau global de l'effet, ou
+ * bien appeler @a shader_set pour donner la valeur de chacun des paramètres.
+ * Voyez l'exemple ci-dessous ainsi que la documentation de
+ * @ref old_movie_shader_amount pour plus de détails sur ces paramètres.
+ *
+ * Exemple (<a href="old_movie_fr.ddd.txt">old_movie_fr.ddd</a>):
+ * @include "old_movie_fr.ddd.txt"
+ */
+old_movie_shader();
+
+/**
+ * @~english
+ * Define the amount of @ref old_movie_shader effect.
+ * Equivalent to:
+ *
+ * @~french
+ * Définit le niveau d'effet de @ref old_movie_shader.
+ * Équivalent à:
+ * @~
+ * @code
+    OldMovieAmount := Amount
+    shader_set time := page_time mod 1000
+    shader_set flicker := 0.1 * OldMovieAmount
+    shader_set lightvariance := 0.05 * OldMovieAmount
+    shader_set blackandwhite := 1.0 * OldMovieAmount
+    shader_set oversaturation := 0.3 * OldMovieAmount
+    shader_set vignette := 1.0 * OldMovieAmount
+    shader_set scratches := 0.5 * OldMovieAmount^4
+    shader_set scratchsize := 8, 200
+    shader_set splotches := 200 * OldMovieAmount^8
+ * @endcode
+ */
+old_movie_shader_amount(Amount:real);
 
 /**
  * @}

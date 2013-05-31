@@ -1,0 +1,56 @@
+import FilmStrip
+
+W -> window_width * 90%
+H -> window_height * 90%
+
+Old -> 1
+key "Space" -> Old := 1 - Old ; refresh 0.0
+
+page "Old movie effect",
+    // Fond gris
+    clear_color 0.8, 0.8, 0.8, 1.0
+
+    // Dessine un texte noir sur une image de papier
+    // Crée une texture
+    frame_texture W, H,
+        color "white" 
+        texture "http://www.taodyne.com/images/old_paper_01s.jpg"
+        rectangle W, H
+        color "black"
+        font "Tangerine", 70, bold
+        text_box 0, 0, W, H,
+            align_center
+            vertical_align_center
+            font_size 70
+            text "Vieux film"
+        text_box 0, 0, W, H,
+            vertical_align_bottom
+            align 0.9
+            font_size 30
+            text "<Espace> pour activer/désactiver"
+
+    locally
+        if Old = 1 then
+            // Fait trembler l'image aléatoirement 
+            texture_transform
+                if random * 100 > 95 then
+                     translate 0.0, 0.05*(0.5-random), 0.0
+            texture_wrap true, true
+
+            // Active l'effet vieux film
+            old_movie_shader
+
+            // Choix du niveau global de l'effet
+            old_movie_shader_age 0.9
+
+            // Réglage fin de certains défauts
+            shader_set vignette := 0.8 
+            shader_set oversaturation := 0.1
+            shader_set lightvariance := 0.1
+            shader_set blackandwhite := 0.0
+            shader_set flicker := 0.04
+
+        // Applique la texture sur un rectangle arrondi 
+        color "white"
+        rounded_rectangle 0, 0, W, H, 40
+
