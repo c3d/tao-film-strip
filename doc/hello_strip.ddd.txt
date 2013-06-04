@@ -1,6 +1,8 @@
 import Animate     // For the [A..B, ] notation
 import FilmStrip
 
+key "Return" -> goto_page page_name 1
+
 page "Film strip",
     GradientBackground
 
@@ -28,10 +30,6 @@ StripTransform R:real ->
         rotatey -45 * R
         scale 1.0 - R
 
-
-// Re-use scene supplied with Tao Presentations
-import "system:templates/hello_world/hello_world.ddd"
-
 HelloWorld ->
     color "white"
     milkyway 10000
@@ -39,5 +37,32 @@ HelloWorld ->
     earth 400
     hello_world 440
 
-key "Return" -> goto_page page_name 1
+milkyway R ->
+    locally
+        texture_wrap true, true
+        texture_transform {scale 5, 5, 5}
+        texture "system:templates/hello_world/images/milkyway.jpg"
+        rotatey 0.02 * page_time + 100
+        scale 1, -1, 1
+        sphere R
+
+earth R ->
+    locally
+        texture "system:templates/hello_world/images/earth.jpg"
+        rotatey 5 * page_time + 250
+        sphere 0, 0, 0, R
+
+hello_world R ->
+    locally
+        frame_texture 1900, 600,
+            color 1, 1, 1, 1
+            reset_transform
+            font "Arial Unicode MS", "unifont", 72
+            move_to -800, -9, 0
+            text "Hello World! or Καλημέρα κόσμε; or こんにちは 世界"
+        rotatey -11 * page_time + 180
+        color 20% , 20% , 20% , 70%
+        sphere 0, 0, 0, R - 30
+        color 100% , 90% , 20% , 90%
+        sphere 0, 0, 0, R
 
