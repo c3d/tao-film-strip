@@ -1,0 +1,43 @@
+import Animate     // For the [A..B, ] notation
+import FilmStrip
+
+page "Film strip",
+    GradientBackground
+
+    [2..10, ]
+        StripTransform smooth_down_ratio
+
+        color "white"
+        film_strip 25 * down_ratio^2,
+            frame_texture 1280, 768,
+                HelloWorld
+            color "white"
+            rounded_rectangle 0, 0, 1120, 672, 40
+
+GradientBackground ->
+  locally
+    disable_depth_mask
+    color "white"
+    linear_gradient window_width/2, 0, window_width/2, window_height, window_width, window_height,
+        gradient_color 0, 0.8, 0.8, 0.8, 1
+        gradient_color 1, 0.2, 0.2, 0.2, 1
+    rectangle window_width, window_height
+
+StripTransform R:real ->
+        translate 500 * R, 0, -10000 * R
+        rotatey -45 * R
+        scale 1.0 - R
+
+
+// Re-use scene supplied with Tao Presentations
+import "system:templates/hello_world/hello_world.ddd"
+
+HelloWorld ->
+    color "white"
+    milkyway 10000
+    rotatez -23
+    earth 400
+    hello_world 440
+
+key "Return" -> goto_page page_name 1
+

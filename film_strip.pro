@@ -16,18 +16,13 @@ include(../crypt_xl.pri)
 INSTALLS    += thismod_icon
 INSTALLS    -= thismod_bin
 
-inst_others.files = 2-pop.wav
-inst_others.path  = $${MODINSTPATH}
-QMAKE_TARGETS += inst_others
-INSTALLS += inst_others
 
 QMAKE_SUBSTITUTES = doc/Doxyfile.in
 QMAKE_DISTCLEAN = doc/Doxyfile
 DOXYFILE = doc/Doxyfile
 DOXYLANG = en,fr
-DOXYADDFILES = doc/hello_strip.ddd \
-               doc/old_movie.ddd \
-               doc/old_movie_fr.ddd \
-               doc/old_video.ddd \
-               doc/countdown.ddd
+DOXYADDFILES = doc/hello_strip.ddd.txt \
+               doc/old_movie.ddd.txt \
+               doc/old_movie_fr.ddd.txt \
+               doc/old_video.ddd.txt
 include(../modules_doc.pri)
