@@ -1,8 +1,8 @@
 /**
  * @~english
  * @taomoduledescription{FilmStrip, Film strip and old movie effects}
+ * <tt>import FilmStrip</tt> - Show video or other content in the frames of a 35mm film strip.@n
  *
- * Show video or other content in the frames of a 35mm film strip.
  * This module also provides a GLSL shader to simulate defects commonly
  * found on old movies (color fading, lighting instabilities, scratches
  * and splotches), as well as as movie countdown animation that looks like
@@ -23,9 +23,10 @@
  *
  * @~french
  * @taomoduledescription{FilmStrip, Pellicule de film et effet «vieux film»}
+ * <tt>import FilmStrip</tt> - Permet d'afficher des vidéos ou d'autres
+ * contenus dans les cadres d'une pellicule 35mm.@n
  *
- * Permet d'afficher des vidéos ou d'autres contenus dans les cadres d'une
- * pellicule 35mm. Ce module fournit également un shader GLSL qui simule
+ * Ce module fournit également un shader GLSL qui simule
  * les effets du vieillissement des films photographiques (couleurs délavées,
  * scintillements, rayures et taches), et qui peut être appliqué à des vidéos
  * ou tout autre contenu. Également disponible : un compte à rebours animé qui
