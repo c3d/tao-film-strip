@@ -8,16 +8,16 @@
  * and splotches), as well as as movie countdown animation that looks like
  * the sequence commonly used for 35mm movies.
  *
- * Here is an example (<a href="hello_strip.ddd.txt">hello_strip.ddd</a>)
+ * Here is an example (<a href="hello_strip.ddd">hello_strip.ddd</a>)
  * that re-uses the "Hello World" demo, bundled with
  * most versions of Tao Presentations.
  *
- * @include "hello_strip.ddd.txt"
+ * @include hello_strip.ddd
  * @image html HelloStrip.png "The Hello World demo playing on a film strip"
  *
- * To play a video with an "old movie" effect:
+ * To play a video with an "old movie" effect (<a href="old_video.ddd">old_video.ddd</a>):
  *
- * @include "old_video.ddd.txt"
+ * @include old_video.ddd
  *
  * @endtaomoduledescription{FilmStrip}
  *
@@ -31,16 +31,16 @@
  * ou tout autre contenu. Également disponible : un compte à rebours animé qui
  * ressemble à la séquence communément utilisée au début des films 35mm.
  *
- * Voici un exemple (<a href="hello_strip.ddd.txt">hello_strip.ddd</a>)
+ * Voici un exemple (<a href="hello_strip.ddd">hello_strip.ddd</a>)
  * qui réutilise la démonstration "Hello World" fournie
  * avec la plupart des versions de Tao Presentations.
  *
- * @include "hello_strip.ddd.txt"
+ * @include hello_strip.ddd
  * @image html HelloStrip.png "La scène Hello World jouée sur une pellicule 35mm"
  *
- * Pour jouer une vidéo avec un effet vieilli :
+ * Pour jouer une vidéo avec un effet vieilli (<a href="old_video.ddd">old_video.ddd</a>) :
  *
- * @include "old_video.ddd.txt"
+ * @include old_video.ddd
  *
  * @endtaomoduledescription{FilmStrip}
  *
@@ -87,8 +87,8 @@ film_strip(YShift:real, Body);
  * the below example or @ref old_movie_shader_amount for details on what can
  * be set.
  *
- * Example (<a href="old_movie.ddd.txt">old_movie.ddd</a>):
- * @include "old_movie.ddd.txt"
+ * Example (<a href="old_movie.ddd">old_movie.ddd</a>):
+ * @include old_movie.ddd
  *
  * @~french
  * Modifie la texture courante pour la faire ressembler à un vieux film.
@@ -99,8 +99,8 @@ film_strip(YShift:real, Body);
  * Voyez l'exemple ci-dessous ainsi que la documentation de
  * @ref old_movie_shader_amount pour plus de détails sur ces paramètres.
  *
- * Exemple (<a href="old_movie_fr.ddd.txt">old_movie_fr.ddd</a>):
- * @include "old_movie_fr.ddd.txt"
+ * Exemple (<a href="old_movie_fr.ddd">old_movie_fr.ddd</a>):
+ * @include old_movie_fr.ddd
  */
 old_movie_shader();
 
@@ -146,7 +146,7 @@ old_movie_shader_amount(Amount:real);
  * @ref FLPopVolume controls the audio volume of the quick beep that is
  * normally heard when number "2" is shown.
  *
- * Example (<a href="countdown.ddd.txt">countdown.ddd</a>):
+ * Example (<a href="countdown.ddd">countdown.ddd</a>):
  * @~french
  * Affiche un décompte animé similaire à celui utilisé au cinéma.
  *
@@ -172,9 +172,9 @@ old_movie_shader_amount(Amount:real);
  * "neige"). Quant à @ref FLPopVolume, elle contrôle le volume audio du bip
  * qui est normalement émis lorsque le chiffre "2" est affiché.
  *
- * Exemple (<a href="countdown.ddd.txt">countdown.ddd</a>):
+ * Exemple (<a href="countdown.ddd">countdown.ddd</a>):
  * @~
- * @include "countdown.ddd.txt"
+ * @include countdown.ddd
  * @since 1.001 (Tao 1.31)
  */
 film_leader_countdown(Start:real, Duration:real, W:real, H:real);
