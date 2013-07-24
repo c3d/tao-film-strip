@@ -25,9 +25,9 @@ QMAKE_SUBSTITUTES = doc/Doxyfile.in
 QMAKE_DISTCLEAN = doc/Doxyfile
 DOXYFILE = doc/Doxyfile
 DOXYLANG = en,fr
-DOXYADDFILES = doc/hello_strip.ddd \
-               doc/old_movie.ddd \
-               doc/old_movie_fr.ddd \
-               doc/old_video.ddd \
-               doc/countdown.ddd
+DOXYADDFILES = doc/hello_strip.ddd.txt \
+               doc/old_movie.ddd.txt \
+               doc/old_movie_fr.ddd.txt \
+               doc/old_video.ddd.txt \
+               doc/countdown.ddd.txt
 include(../modules_doc.pri)

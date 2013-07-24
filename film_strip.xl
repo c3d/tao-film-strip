@@ -13,7 +13,7 @@ module_description
     import_name "FilmStrip"
     author "Taodyne SAS"
     website "http://www.taodyne.com"
-    version 1.01
+    version 1.001
 
 import "film_strip2.xl.crypt"
 
