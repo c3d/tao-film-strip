@@ -6,7 +6,7 @@ H -> window_height * 90%
 Old -> 1
 key "Space" -> Old := 1 - Old ; refresh 0.0
 
-page "Old movie effect",
+page "Effet vieux film",
     // Fond gris
     clear_color 0.8, 0.8, 0.8, 1.0
 
