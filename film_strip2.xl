@@ -219,7 +219,7 @@ film_leader_countdown Start:real, Duration:real, W:real, H:real ->
             color "#999"
             rectangle W, H
         color "#BBB"
-        ellipse_sector 0, 0, FLRR, FLRR, 90, -page_time mod 1 * 360
+        ellipse_arc 0, 0, FLRR, FLRR, 90, -page_time mod 1 * 360
 
         color "transparent"
         line_width 9*FLR/800

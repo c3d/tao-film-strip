@@ -1,5 +1,5 @@
 @INCLUDE = ../../Doxyfile
 PROJECT_NAME = \"Film strip and old movie effects\"
-PROJECT_NUMBER = 1.011
-QHP_NAMESPACE = com.taodyne.TaoPresentations.modules.FilmStrip.1.011
+PROJECT_NUMBER = 1.0
+QHP_NAMESPACE = com.taodyne.TaoPresentations.modules.FilmStrip.1.0
 QHP_VIRTUAL_FOLDER = FilmStrip
