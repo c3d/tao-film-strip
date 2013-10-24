@@ -114,7 +114,7 @@ old_movie_shader();
  * Définit le niveau d'effet de @ref old_movie_shader.
  * Équivalent à:
  * @~
-@code
+ * @code
     OldMovieAmount := Amount
     shader_set time := page_time mod 1000
     shader_set flicker := 0.1 * OldMovieAmount
@@ -125,7 +125,7 @@ old_movie_shader();
     shader_set scratches := 0.5 * OldMovieAmount^4
     shader_set scratchsize := 8, 200
     shader_set splotches := 200 * OldMovieAmount^8
-@endcode
+ * @endcode
  */
 old_movie_shader_amount(Amount:real);
 
