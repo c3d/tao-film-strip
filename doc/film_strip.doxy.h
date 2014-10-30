@@ -10,7 +10,7 @@
  *
  * Here is an example (<a href="hello_strip.ddd">hello_strip.ddd</a>)
  * that re-uses the "Hello World" demo, bundled with
- * most versions of Tao Presentations.
+ * most versions of Tao3D.
  *
  * @include hello_strip.ddd
  * @image html HelloStrip.png "The Hello World demo playing on a film strip"
@@ -34,7 +34,7 @@
  *
  * Voici un exemple (<a href="hello_strip.ddd">hello_strip.ddd</a>)
  * qui réutilise la démonstration "Hello World" fournie
- * avec la plupart des versions de Tao Presentations.
+ * avec la plupart des versions de Tao3D.
  *
  * @include hello_strip.ddd
  * @image html HelloStrip.png "La scène Hello World jouée sur une pellicule 35mm"
